@@ -1,1 +1,0 @@
-# TheBMGDiary.github.io
