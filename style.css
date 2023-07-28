@@ -5,7 +5,7 @@ e@import url("reset.css");
 body {
     font-family:'Poppins', sans-serif;
     min-height: 100vh; 
-    background: linear-gradient(to right top, black, brown);
+    background: linear-gradient(to right top, purple, pink);
     display: flex;
     align-items: center;
     justify-content: center;
