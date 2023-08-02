@@ -6,6 +6,7 @@ body {
     min-height: 100vh;
     background: linear-gradient(to right top, #004fa3, #d4a20b);
     display: flex;
+    align-items: middle;
 }
 
 body {
