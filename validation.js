@@ -12,7 +12,7 @@ var password = document.getElementById("passWord").value;
           return;
      }
      
-     if (username === "115337" && password === "yes") {
+     if (username === "127667" && password === "ain'tnoway") {
           window.location.replace("127667.html");
           return;
      }
