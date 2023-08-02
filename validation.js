@@ -1,21 +1,15 @@
 function loginPage(form) {
-if (form.userName.value=="username") {
-if (form.passWord.value=="password") {
-location="115337.html"
-} else {
-alert("Incorrect Password")
-}
-} else {  alert("Incorrect Username")
-}
-}
 
-function loginPage(form) {
-if (form.userName.value=="127667") {
-if (form.passWord.value=="password1") {
-location="127667.html"
-} else {
-alert("Incorrect Password")
-}
-} else {  alert("Incorrect Username")
-}
-}
+var username = document.getElementById("userName").value;
+var password = document.getElementById("passWord").value;
+
+if (username === "admin@gmail.com" && password === "user") 
+         {
+               window.location.replace("115337.html");
+          } else if (username === "" && password === "") {
+               alert("Please enter information");
+          } else {
+              alert("Please enter valid information");
+              return;
+          }
+    }
