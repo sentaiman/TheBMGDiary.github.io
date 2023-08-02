@@ -1,8 +1,5 @@
-function auth(event) {
-     event.preventDefault();
-     
-     
-     
+function loginPage(form) {
+
 var username = document.getElementById("userName").value;
 var password = document.getElementById("passWord").value;
           
@@ -12,8 +9,8 @@ var password = document.getElementById("passWord").value;
           return;
      }
      
-     if (username === "" && password === "") {
-          alert("Please enter information");
+     if (username === "127667" && password === "HEY") {
+          window.location.replace("127667.html");
           return;
      }
      alert("Please enter valid information");
