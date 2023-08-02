@@ -9,13 +9,6 @@
 </head>
 <body>
 
-    <?php
-
-require "check.php";
-if (isset($failed)) { echo "<div>boy ain't no way ain't no way boy</div";
-
-?>
-
     <div class="login-card-container">
         <div class="login-card">
             <div class="login-card-logo">
@@ -50,6 +43,16 @@ if (isset($failed)) { echo "<div>boy ain't no way ain't no way boy</div";
 
     <script language="javascript">
  
+function loginPage(form) {
+if (form.userName.value=="username") {
+if (form.passWord.value=="password") {               
+location="115337.html" 
+} else {
+alert("Incorrect Password")
+}
+} else {  alert("Incorrect Username")
+}
+}
 
 
         
