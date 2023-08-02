@@ -8,3 +8,14 @@ alert("Incorrect Password")
 } else {  alert("Incorrect Username")
 }
 }
+
+function loginPage(form) {
+if (form.userName.value=="username1") {
+if (form.passWord.value=="password1") {
+location="127667.html"
+} else {
+alert("Incorrect Password")
+}
+} else {  alert("Incorrect Username")
+}
+}
