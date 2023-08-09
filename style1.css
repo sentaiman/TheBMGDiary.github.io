@@ -311,6 +311,15 @@ aside .toggle .close{
     display:none;
 }
 
+}
+.sidebarcontainer{
+    width:400px;
+    background: rgba(255, 255, 255, .5);
+    padding: 3rem;
+    border-radius: 8px;
+    position: relative;
+}
+
 aside .sidebar{
     display: flex;
     flex-direction: column;
