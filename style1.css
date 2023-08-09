@@ -1,17 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+.desktop-1-ezB {
+  background-color: #ffffff;
+  height: 102.4rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 
-#menusidebar {
-  border-radius: 25px;
-  background: #FFFFFF;
-  padding: 20px; 
-  width: 200px;
-  height: 700px;  
+  .rectangle-1-GVm {
+    background-color: #c7c7c7;
+    border-radius: 2rem;
+    height: 95.2rem;
+    left: 2.4rem;
+    position: absolute;
+    top: 3.7rem;
+    width: 25.6rem;
+  }
+  .rectangle-2-Qdu {
+    border-radius: 2rem;
+    height: 8rem;
+    left: 4.2rem;
+    object-fit: cover;
+    position: absolute;
+    top: 7.4rem;
+    vertical-align: top;
+    width: 22rem;
+  }
+  .dashboard-uqZ {
+    color: #000000;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 3rem;
+    font-weight: 400;
+    height: 3.7rem;
+    left: 7.5rem;
+    line-height: 1.2125;
+    position: absolute;
+    top: 23.2rem;
+    white-space: nowrap;
+    width: 15.5rem;
+  }
+  .homework-B2P {
+    color: #000000;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 3rem;
+    font-weight: 400;
+    height: 3.7rem;
+    left: 7.5rem;
+    line-height: 1.2125;
+    position: absolute;
+    top: 31.8rem;
+    white-space: nowrap;
+    width: 15.3rem;
+  }
+  .assessment-UXH {
+    color: #000000;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 3rem;
+    font-weight: 400;
+    height: 3.7rem;
+    left: 7.5rem;
+    line-height: 1.2125;
+    position: absolute;
+    top: 40.4rem;
+    white-space: nowrap;
+    width: 17.3rem;
+  }
+  .progress-Mqy {
+    color: #000000;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 3rem;
+    font-weight: 400;
+    height: 3.7rem;
+    left: 7.5rem;
+    line-height: 1.2125;
+    position: absolute;
+    top: 49.4rem;
+    white-space: nowrap;
+    width: 12.6rem;
+  }
+  .policies-51H {
+    color: #000000;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 3rem;
+    font-weight: 400;
+    height: 3.7rem;
+    left: 7.5rem;
+    line-height: 1.2125;
+    position: absolute;
+    top: 58rem;
+    white-space: nowrap;
+    width: 10.9rem;
+  }
 }
-
-#menusidebarlogo {
-  border-radius: 25px;
-  background: #FFFFFF;
-  padding: 20px; 
-  width: 200px;
-  height: 100px;  
 }
