@@ -15,7 +15,7 @@ var password = document.getElementById("passWord").value;
      }
 
      if (username === "abhijay" && password === "NAH") {
-          window.location.replace("abhijay.html");
+          window.location.replace("abhijay.html + Abhijaystyle.css");
           return;
      }
      
