@@ -44,8 +44,13 @@
             </div>
         </div>
     </div>
-<script src="validation.js">
-</script>
+<script src="validation.js"></script>
+
+    <script> 
+    function preventBack() { window.history.forward(); }  
+    setTimeout("preventBack()", 0);  
+    window.onunload = function () { null };
+    </script>
     
 </body>
 
