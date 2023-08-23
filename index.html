@@ -37,7 +37,7 @@
                     </div>
                     <a href="Pasresetindex.html">I forgot my password!</a>
                 </div>
-                <button type="button" value="Login" onClick="loginPage(form)">Login</button>
+                <button type="button" value="Login" onClick="loginPage(form) id="gogogo">Login</button>
             </form>
             <div class="login-card-footer">
                 Don't have an account? <a href="CreateAccindex.html">Create a free account.</a>
@@ -46,7 +46,13 @@
     </div>
 <script src="validation.js">
 
-
+var input = document.getElementById("passWord");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("gogogo").click();
+  }
+});
     
 </script>
 
