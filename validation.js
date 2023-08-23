@@ -18,6 +18,11 @@ var password = document.getElementById("passWord").value;
           window.location.replace("Dashboard.html");
           return;
      }
+
+     if (username === "Arnav" && password === "pablo") {
+          window.location.replace("Dashboard.html");
+          return;
+     }
      
      alert("Please enter valid information");
      return;
