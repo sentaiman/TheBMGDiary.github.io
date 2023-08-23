@@ -16,6 +16,29 @@
     
     <!--Tab Title-->
     <title>Dashboard</title> 
+    
+        <script>
+            (function() {
+    const idleDurationSecs = 600;
+    const redirectUrl = 'Logoutindex.html';
+    let idleTimeout;
+
+    const resetIdleTimeout = function() {
+
+        if(idleTimeout) clearTimeout(idleTimeout);
+
+        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 300);
+    };
+
+    resetIdleTimeout();
+
+    ['click', 'touchstart', 'mousemove'].forEach(evt =>
+        document.addEventListener(evt, resetIdleTimeout, false)
+    );
+
+  })();
+
+    </script>
 </head>
 
 <body>
