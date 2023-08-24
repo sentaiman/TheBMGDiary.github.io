@@ -23,6 +23,10 @@ var password = document.getElementById("passWord").value;
           window.location.replace("Dashboard.html");
           return;
      }
+      if (username === "panda bear" && password === "teddybear56") {
+          window.location.replace("Dashboard.html");
+          return;
+     }
      
      alert("Please enter valid information");
      return;
