@@ -1,16 +1,25 @@
+<!--Passwrod reset-->
+<!--Created By: Nikilesh-->
+<!--Last updated on: 25/08/2023-->
+<!--Desription: Designed with user-friendliness and security in mind, this page provides a streamlined 
+and secure process for users to regain control of their accounts while maintaining the confidentiality of their information.-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Name os the tab-->
     <title>Reset Password</title>
+    <!--Password reset style.ccss-->
     <link rel="stylesheet" href="Pasresetstyle.css">
+    <!--Links to google fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
 
 </head>
 <body>
     <div class="login-card-container">
         <div class="login-card">
+            <!--Bvback button goes to the login page-->
             <button onclick="window.history.back()">Back</button>
             <div class="login-card-header">
                 <h1>Reset Password</h1>
@@ -18,10 +27,12 @@
             </div>
             <form class="login-card-form">
                 <div class="form-item">
+                    <!--Mail textbox-->
                     <span class="form-item-icon material-symbols-rounded">mail</span>
                     <input type="text" placeholder="Enter Email" id="emailForm" 
                     autofocus required>
                 </div>
+                <!--Reset password button-->
                 <button type="submit">Reset Password</button>
             </form>
 
