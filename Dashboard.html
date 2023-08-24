@@ -1,5 +1,6 @@
 e<!------------------------------------------SIDEBAR----------------------------------------->
-<!--Name: Abhi-->
+<!--Name: Abhijay-->
+<!--Last updated on: 25/08/2023-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,7 @@ e<!------------------------------------------SIDEBAR----------------------------
     
     <!--Tab Title-->
     <title>Dashboard</title> 
-    
+    <!--Automatically logs the user out after inactivity of 10 minutes-->
         <script>
             (function() {
     const idleDurationSecs = 600;
@@ -39,6 +40,7 @@ e<!------------------------------------------SIDEBAR----------------------------
   })();
 
     </script>
+    
 </head>
 
 <body>
@@ -46,25 +48,25 @@ e<!------------------------------------------SIDEBAR----------------------------
         <header>
 
             <a href="Dashboard.html">
-            <div class="image-text">
+            <div class="image-text"> <!--BMG Logo-->
                 <span class="image">
-                    <img src="BMGLogo.png" alt="">
+                    <img src="BMGLogo.png" alt="BMG Logo">
                 </span>
         </a>
                 <div class="text logo-text">
-                    <span class="name">BMG DIARY</span>
+                    <span class="name">BMG DIARY</span> <!--Sidebar Heading-->
                     <span class="profession">Prototype</span>
                 </div>
             </div>
             
 
-            <i class='bx bx-chevron-right toggle'></i>
+            <i class='bx bx-chevron-right toggle'></i> <!--Toggle open and close side bar-->
         </header>
 
         <div class="menu-bar">
             <div class="menu">
 
-                <li class="search-box">
+                <li class="search-box"> <!--Search Bar-->
                     <i class='bx bx-search icon'></i>
                     <input type="text" placeholder="Search...">
                 </li>
@@ -73,20 +75,20 @@ e<!------------------------------------------SIDEBAR----------------------------
                     <li class="nav-link">
                         <a href="Dashboard.html">
                             <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Dashboard</span>
+                            <span class="text nav-text">Dashboard</span> <!--Dashboard button-->
                         </a>
                     </li>
 
                     <li class="nav-link">
                         <a href="Timetableindex.html">
                             <i class='bx bxs-time'></i>
-                            <span class="text nav-text">Timetable</span>
+                            <span class="text nav-text">Timetable</span> <!--Timetable button-->
                         </a>
                     </li>
                     
                     <li class="nav-link">
                         <a href="Homeworkindex.html">
-                            <i class='bx bx-checkbox-checked icon'></i>
+                            <i class='bx bx-checkbox-checked icon'></i>  <!--Homework Button-->
                             <span class="text nav-text">Homework</span>
                         </a>
                     </li>
@@ -94,25 +96,17 @@ e<!------------------------------------------SIDEBAR----------------------------
 
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bxs-comment-error icon'></i>
+                            <i class='bx bxs-comment-error icon'></i> <!--Policies Button-->
                             <span class="text nav-text">Policies</span>
                         </a>
                     </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-spreadsheet' ></i>
-                            <span class="text nav-text">Progress</span>
-                        </a>
-                    </li>
-
-                    
 
                 </ul>
             </div>
 
             <div class="bottom-content">
                 <li class="">
+                    <!--Stops the user from exiting the dasboard by pressing teh back button-->
                     <a type="button" onclick="AHH();">
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Logout</span>
@@ -120,16 +114,14 @@ e<!------------------------------------------SIDEBAR----------------------------
                 </li>
 
                
-
-
                 <li class="mode">
                     <div class="sun-moon">
-                        <i class='bx bx-moon icon sun'></i>
-                        <i class='bx bx-sun icon moon'></i>
+                        <i class='bx bx-moon icon sun'></i> <!--Light Mode icon-->
+                        <i class='bx bx-sun icon moon'></i> <!--Dark Mode Icon-->
                     </div>
                     <span class="mode-text text">Dark mode</span>
 
-                    <div class="toggle-switch">
+                    <div class="toggle-switch"> <!--Toggles between light and dark mode-->
                         <span class="switch"></span>
                     </div>
                 </li>
@@ -140,7 +132,7 @@ e<!------------------------------------------SIDEBAR----------------------------
     </nav>
 
     <section class="home">
-        <div class="text">WELCOME ABHIJAY TALLURI</div>
+        <div class="text">WELCOME ABHIJAY TALLURI</div> <!--Greeting--> 
     </section>
 
     <script src="Dashboardscript.js">
