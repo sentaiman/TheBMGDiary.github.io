@@ -1,3 +1,5 @@
+//Login Usernames and Passswords
+
 function loginPage(form) {
 
 var username = document.getElementById("userName").value;
