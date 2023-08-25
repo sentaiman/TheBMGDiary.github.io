@@ -19,15 +19,7 @@ Included a light and dark mode toggle-->
     <!--Tab Title-->
     <title>Dashboard</title> 
     <!--Automatically logs the user out after inactivity of 10 minutes-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        
-      $(document).ready(function skull(){
-        $("button").click(function(){
-          $("HomeWorkDiv").toggle();
-        });
-      });
-    </script>
+    
     <script>
             (function() {
     const idleDurationSecs = 600;
@@ -95,16 +87,15 @@ Included a light and dark mode toggle-->
                             <span class="text nav-text">Timetable</span> <!--Timetable button-->
                         </a>
                     </li>
-                    <div id="HomeWorkDiv" style="display:none">
-                        <object type="text/html" data="HomeworkTracker.html" width="1300px" height="600px">
-                        </object>
+                
+                      
                     <li class="nav-link">
-                        <button id="YES" onclick="skull"></button>
+                        
                             <i class='bx bxs-check-square'></i> <!--Homework Button-->
                             <span class="text nav-text">Homework</span>
                         </a>
                     </li>
-                    </div>
+                   
 
 
                     <li class="nav-link">
