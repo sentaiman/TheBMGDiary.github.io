@@ -10,29 +10,12 @@ var password = document.getElementById("passWord").value;
           return;
      }
 
-     if (username === "115337" && password === "ONG") {
+
+     if (username === "STUDENT" && password === "STUDENT12345") {
           window.location.replace("Dashboard.html");
           return;
      }
 
-     if (username === "127667" && password === "HEY") {
-          window.location.replace("Dashboard.html");
-          return;
-     }
-
-     if (username === "abhijay" && password === "NAH") {
-          window.location.replace("Dashboard.html");
-          return;
-     }
-
-     if (username === "Arnav" && password === "pablo") {
-          window.location.replace("Dashboard.html");
-          return;
-     }
-      if (username === "panda bear" && password === "teddybear56") {
-          window.location.replace("Dashboard.html");
-          return;
-     }
      
      alert("Please enter valid information");
      return;
