@@ -308,3 +308,30 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
+
+.Top-bar .Profile {
+    left: 200%;
+    width: 50px;
+    width: 860px;
+    height: 64px;
+    background: white;
+    border-radius: 15px;
+    align-items: right;
+    right: auto;
+}
+
+.calender{
+    border-radius: 27px;
+    width: 100px;
+    height: 50px;
+    position: relative;
+    
+}
+
+
+.todo-list .center-both {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
