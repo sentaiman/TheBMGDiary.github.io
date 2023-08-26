@@ -11,6 +11,7 @@
     <!----======== CSS Link======== -->
     <link rel="stylesheet" href="Dashboardstyle.css">
     
+ 
     <!----===== Boxicons CSS Link===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
@@ -30,9 +31,58 @@
             xhr.send();
         });
     </script>
+    <style>
+       
+        #specialbody {
+            position:absolute;
+            
+        }
+     
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
 </head>
 
-<body>
+<body id="specialbody" style="overflow:hidden;" onload="myFunction()">
 
     <nav class="sidebar close">
         <header>
@@ -68,7 +118,7 @@
 
                     
                     <li class="nav-link">
-                        <a onclick="HomeworkShow">
+                        <a href="#" onclick="HomeworkShow(); HomeworkOverGrade();">
                             <i class='bx bx-checkbox-checked icon'></i>
                             <span class="text nav-text">Homework</span>
                         </a>
@@ -89,7 +139,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="#" onclick="GradeCalcShow(); GradeOverHomework();">
                             <i class='bx bxs-calculator icon'></i>
                             <span class="text nav-text">Grade Calculator</span>
                         </a>
@@ -123,31 +173,77 @@
     </nav>
 
     <section class="home">
-        <div class="text">Welcome</div>
+        
+    
+    <div id="HomeWorkDiv" style="display:none;"> 
+    <object type="text/html" data="HomeworkTracker.html" width="1278px" height="780px">
+    </object>
+ </div>
+        
+        <div id="GradeCalcDiv" style="display:none;"> 
+    <object type="text/html" data="GradeCalculate.html" width="1278px" height="780px">
+    </object>
+ </div>
+
+
+
+
+<div id="snackbar">Welcome!</div>
     </section>
+    
 
 
     <script src="Dashboardscript.js"></script>
     <script>
 
-    <script>
+
      function HomeworkShow(){
     var e = document.getElementById('HomeWorkDiv');
 
     if ( e.style.display !== 'none' ) {
-        e.style.display = 'none';
+        e.style.display = 'block';
     } else {
         e.style.display = '';
     }
 }
+
+        
     </script>
+    <script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+      <script>
+
+
+     function GradeCalcShow(){
+    var e = document.getElementById('GradeCalcDiv');
+
+    if ( e.style.display !== 'none' ) {
+        e.style.display = 'block';
+    } else {
+        e.style.display = '';
+    }
+}
+
         
     </script>
 
-<div id="HomeWorkDiv" style="display:none"> 
-    <object type="text/html" data="HomeworkTracker.html" width="1300px" height="600px">
-    </object>
- </div>
+<script>
+    
+    function GradeOverHomework(){
+    HomeWorkDiv.replaceWith(GradeCalcDiv);
+    }
+    </script>
+    
+    <script>
+        
+    
+        
+    </script>
     
 </body>
 </html>
