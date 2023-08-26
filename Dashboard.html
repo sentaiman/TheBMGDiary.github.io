@@ -1,8 +1,6 @@
 <!------------------------------------------SIDEBAR----------------------------------------->
-<!--Name: Abhijay-->
-<!--Last updated on: 25/08/2023-->
-<!--Description: Sidebar neatly organizes content into categories. It allows for easier use and accesibility.
-Included a light and dark mode toggle-->
+<!--Name: Abhi-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,62 +14,46 @@ Included a light and dark mode toggle-->
     <!----===== Boxicons CSS Link===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Tab Title-->
     <title>Dashboard</title> 
-    <!--Automatically logs the user out after inactivity of 10 minutes-->
-    
     <script>
-            (function() {
-    const idleDurationSecs = 600;
-    const redirectUrl = 'Logoutindex.html';
-    let idleTimeout;
-
-    const resetIdleTimeout = function() {
-
-        if(idleTimeout) clearTimeout(idleTimeout);
-
-        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 300);
-    };
-
-    resetIdleTimeout();
-
-    ['click', 'touchstart', 'mousemove'].forEach(evt =>
-        document.addEventListener(evt, resetIdleTimeout, false)
-    );
-
-  })();
-
+        window.addEventListener("load", function () {
+            var contentContainer = document.querySelector(".content-container");
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "external.html", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    contentContainer.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
     </script>
-    
 </head>
 
 <body>
 
-    
-    </div>
     <nav class="sidebar close">
         <header>
-
-            <a href="Dashboard.html">
-            <div class="image-text"> <!--BMG Logo-->
+            <div class="image-text">
                 <span class="image">
-                    <img src="BMGLogo.png" alt="BMG Logo">
+                    <img src="BMGLogo.png" alt="">
                 </span>
-        </a>
+
                 <div class="text logo-text">
-                    <span class="name">BMG DIARY</span> <!--Sidebar Heading-->
+                    <span class="name">BMG DIARY</span>
                     <span class="profession">Prototype</span>
                 </div>
             </div>
-            
 
-            <i class='bx bx-chevron-right toggle'></i> <!--Toggle open and close side bar-->
+            <i class='bx bx-chevron-right toggle'></i>
         </header>
 
         <div class="menu-bar">
             <div class="menu">
 
-                <li class="search-box"> <!--Search Bar-->
+                <li class="search-box">
                     <i class='bx bx-search icon'></i>
                     <input type="text" placeholder="Search...">
                 </li>
@@ -80,32 +62,35 @@ Included a light and dark mode toggle-->
                     <li class="nav-link">
                         <a href="Dashboard.html">
                             <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">Dashboard</span> <!--Dashboard button-->
+                            <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-link">
-                        <a href="Timetableindex.html">
-                            <i class='bx bxs-time'></i>
-                            <span class="text nav-text">Timetable</span> <!--Timetable button-->
-                        </a>
-                    </li>
-                
-                      
-                    <li class="nav-link">
-                        <a href="HomeworkTracker.html" target="myiFrame">
-                           <i class='bx bx-checkbox-checked icon'></i>
+                        <a href="Homeworkindex.html">
+                            <i class='bx bx-checkbox-checked icon'></i>
                             <span class="text nav-text">Homework</span>
                         </a>
                     </li>
-                    
-                   
-
 
                     <li class="nav-link">
                         <a href="#">
-                            <i class='bx bxs-comment-error-icon'></i> <!--Policies Button-->
+                            <i class='bx bx-table icon'></i>
+                            <span class="text nav-text">Assessments</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-comment-error icon'></i>
                             <span class="text nav-text">Policies</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-calculator icon'></i>
+                            <span class="text nav-text">Grade Calculator</span>
                         </a>
                     </li>
 
@@ -114,47 +99,34 @@ Included a light and dark mode toggle-->
 
             <div class="bottom-content">
                 <li class="">
-                    <!--Stops the user from exiting the dasboard by pressing teh back button-->
-                    <a type="button" onclick="AHH();">
+                    <a href="Logoutindex.html">
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Logout</span>
                     </a>
                 </li>
 
-               
                 <li class="mode">
                     <div class="sun-moon">
-                        <i class='bx bx-moon icon sun'></i> <!--Light Mode icon-->
-                        <i class='bx bx-sun icon moon'></i> <!--Dark Mode Icon-->
+                        <i class='bx bx-sun icon sun'></i>
+                        <i class='bx bx-moon icon moon'></i>
                     </div>
                     <span class="mode-text text">Dark mode</span>
 
-                    <div class="toggle-switch"> <!--Toggles between light and dark mode-->
+                    <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
                 </li>
                 
             </div>
         </div>
-
     </nav>
 
     <section class="home">
-        <div class="text">WELCOME, STUDENT</div> <!--Greeting--> 
+        <div class="text">Welcome</div>
     </section>
 
-    <script src="Dashboardscript.js">
-    
-    </script>
 
+    <script src="Dashboardscript.js"></script>
 
-    <script>
-    
-    function AHH() {
-        window.location.replace('Logoutindex.html');
-    }
-    
-</script>
-<iframe name="myiFrame" src="about:blank" src=HomeworkTracker.html width="1175" height="690" style="position:relative; top: 10px; left: 200px;" scrolling="no">
 </body>
 </html>
