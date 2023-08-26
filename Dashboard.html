@@ -31,6 +31,8 @@
             xhr.send();
         });
     </script>
+    
+   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <style>
        
         #specialbody {
@@ -100,7 +102,7 @@
             <i class='bx bx-chevron-right toggle'></i>
         </header>
 
-        <div class="menu-bar">
+        <div class="menu-bar" style="overflow:hidden;">
             <div class="menu">
 
                 <li class="search-box">
@@ -118,7 +120,7 @@
 
                     
                     <li class="nav-link">
-                        <a href="#" onclick="HomeworkShow(); HomeworkOverGrade();">
+                        <a id="HomeworkButton" href="#" onclick="HomeworkShow();">
                             <i class='bx bx-checkbox-checked icon'></i>
                             <span class="text nav-text">Homework</span>
                         </a>
@@ -139,7 +141,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="#" onclick="GradeCalcShow(); GradeOverHomework();">
+                        <a id="GradeButton" href="#" onclick="GradeCalcShow(); GradeOverHomework();">
                             <i class='bx bxs-calculator icon'></i>
                             <span class="text nav-text">Grade Calculator</span>
                         </a>
@@ -194,21 +196,7 @@
 
 
     <script src="Dashboardscript.js"></script>
-    <script>
-
-
-     function HomeworkShow(){
-    var e = document.getElementById('HomeWorkDiv');
-
-    if ( e.style.display !== 'none' ) {
-        e.style.display = 'block';
-    } else {
-        e.style.display = '';
-    }
-}
-
-        
-    </script>
+   
     <script>
 function myFunction() {
   var x = document.getElementById("snackbar");
@@ -216,34 +204,39 @@ function myFunction() {
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 </script>
-      <script>
-
-
-     function GradeCalcShow(){
-    var e = document.getElementById('GradeCalcDiv');
-
-    if ( e.style.display !== 'none' ) {
-        e.style.display = 'block';
-    } else {
-        e.style.display = '';
-    }
-}
-
-        
-    </script>
-
-<script>
     
-    function GradeOverHomework(){
-    HomeWorkDiv.replaceWith(GradeCalcDiv);
-    }
-    </script>
+ 
     
     <script>
-        
+          function GradeCalcShow(){
+ 
+             
+              
+             document.getElementById('GradeCalcDiv').style.display = "block"; 
+              document.getElementById('HomeWorkDiv').style.display = "none";
+          }
+    </script>
     
+   <script>
+
+
+     function HomeworkShow(){
+  
+document.getElementById('HomeWorkDiv').style.display = "block";
+document.getElementById('GradeCalcDiv').style.display = "none";
+     }
+         
+   
         
     </script>
+        
+       
+   
+    
+    
+
+
+
     
 </body>
 </html>
