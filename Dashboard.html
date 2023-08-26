@@ -66,8 +66,9 @@
                         </a>
                     </li>
 
+                    
                     <li class="nav-link">
-                        <a href="Homeworkindex.html">
+                        <a href="Homeworkindex.html" onclick="HomeworkShow>
                             <i class='bx bx-checkbox-checked icon'></i>
                             <span class="text nav-text">Homework</span>
                         </a>
@@ -127,6 +128,26 @@
 
 
     <script src="Dashboardscript.js"></script>
+    <script>
 
+    <script>
+     function HomeworkShow(){
+    var e = document.getElementById('HomeWorkDiv');
+
+    if ( e.style.display !== 'none' ) {
+        e.style.display = 'none';
+    } else {
+        e.style.display = '';
+    }
+}
+    </script>
+        
+    </script>
+
+<div id="HomeWorkDiv" style="display:none"> 
+    <object type="text/html" data="HomeworkTracker.html" width="1300px" height="600px">
+    </object>
+ </div>
+    
 </body>
 </html>
