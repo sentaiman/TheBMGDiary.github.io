@@ -5,8 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 :root{
@@ -50,7 +48,7 @@ body.dark{
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
+    height:100%;
     width: 250px;
     padding: 10px 14px;
     background: var(--sidebar-color);
@@ -285,55 +283,21 @@ body.dark .switch::before{
 }
 
 .home{
-    position: absolute;
-    top: 0;
-    top: 0;
-    left: 250px;
+    position: relative;
+    left: 88px;
     height: 100vh;
     width: calc(100% - 250px);
-    background-color: var(--body-color);
+    background: var(--body-color);
     transition: var(--tran-05);
 }
 .home .text{
     font-size: 30px;
     font-weight: 500;
     color: var(--text-color);
-    padding: 12px 60px;
-}
-
-.sidebar.close ~ .home{
-    left: 78px;
-    height: 100vh;
-    width: calc(100% - 78px);
-}
-
-body.dark .home .text{
-    color: var(--text-color);
-}
-
-.Top-bar .Profile {
-    left: 200%;
-    width: 50px;
-    width: 860px;
-    height: 64px;
-    background: white;
-    border-radius: 15px;
-    align-items: right;
-    right: auto;
-}
-
-.calender{
-    border-radius: 27px;
-    width: 100px;
-    height: 50px;
-    position: relative;
-    
+    padding: 8px 40px;
 }
 
 
-.todo-list .center-both {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
+
 
