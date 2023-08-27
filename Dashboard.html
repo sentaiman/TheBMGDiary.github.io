@@ -11,6 +11,7 @@
     <!----======== CSS Link======== -->
     <link rel="stylesheet" href="Dashboardstyle.css">
     
+ 
     <!----===== Boxicons CSS Link===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
@@ -30,9 +31,60 @@
             xhr.send();
         });
     </script>
+    
+   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <style>
+       
+        #specialbody {
+            position:absolute;
+            
+        }
+     
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
 </head>
 
-<body>
+<body id="specialbody" style="overflow:hidden;" onload="myFunction()">
 
     <nav class="sidebar close">
         <header>
@@ -50,7 +102,7 @@
             <i class='bx bx-chevron-right toggle'></i>
         </header>
 
-        <div class="menu-bar">
+        <div class="menu-bar" style="overflow:hidden;">
             <div class="menu">
 
                 <li class="search-box">
@@ -66,8 +118,9 @@
                         </a>
                     </li>
 
+                    
                     <li class="nav-link">
-                        <a href="Homeworkindex.html">
+                        <a id="HomeworkButton" href="#" onclick="HomeworkShow();">
                             <i class='bx bx-checkbox-checked icon'></i>
                             <span class="text nav-text">Homework</span>
                         </a>
@@ -88,7 +141,7 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="#">
+                        <a id="GradeButton" href="#" onclick="GradeCalcShow(); GradeOverHomework();">
                             <i class='bx bxs-calculator icon'></i>
                             <span class="text nav-text">Grade Calculator</span>
                         </a>
@@ -122,52 +175,68 @@
     </nav>
 
     <section class="home">
-         <div class="hero">
-            <div class="Topnav">
-                <img src="user.png" alt="" class="user-pic" onclick="toggleMenu()">
-                <div class="sub-menu-wrap" id="subMenu">
-                    <div class="sub-menu">
-                        <div class="user-info">
-                            <img src="user.png" alt="">
-                            <h2>Admin BMG</h2>
-                        </div>
-                        <hr>
+        
+    
+    <div id="HomeWorkDiv" style="display:none;"> 
+    <object type="text/html" data="HomeworkTracker.html" width="1278px" height="780px">
+    </object>
+ </div>
+        
+        <div id="GradeCalcDiv" style="display:none;"> 
+    <object type="text/html" data="GradeCalculate.html" width="1278px" height="780px">
+    </object>
+ </div>
 
-                        <a href="#" class="sub-menu-link">
-                            <img src="profile.png" alt="">
-                            <p>Edit Profile</p>
-                            <span>></span>
-                        </a>
-                        <a href="#" class="sub-menu-link">
-                            <img src="setting.png" alt="">
-                            <p>Settings</p>
-                            <span>></span>
-                        </a>
-                        <a href="#" class="sub-menu-link">
-                            <img src="help.png" alt="">
-                            <p>Help</p>
-                            <span>></span>
-                        </a>
-                    </div>
-                </div>
-                <ul>
-                    <div class="date" id="date"></div>
-                    <div class="weather" id="weather">Loading...</div>
-                    
-                </ul>
-            </div>
-         </div>
+
+
+
+<div id="snackbar">Welcome!</div>
     </section>
+    
 
-<script>
-    let subMenu = document.getElementById("subMenu")
-
-    function toggleMenu(){
-        subMenu.classList.toggle("open-menu")
-    }
-</script>
 
     <script src="Dashboardscript.js"></script>
+   
+    <script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+    
+ 
+    
+    <script>
+          function GradeCalcShow(){
+ 
+             
+              
+             document.getElementById('GradeCalcDiv').style.display = "block"; 
+              document.getElementById('HomeWorkDiv').style.display = "none";
+          }
+    </script>
+    
+   <script>
 
+
+     function HomeworkShow(){
+  
+document.getElementById('HomeWorkDiv').style.display = "block";
+document.getElementById('GradeCalcDiv').style.display = "none";
+     }
+         
+   
+        
+    </script>
+        
+       
+   
+    
+    
+
+
+
+    
 </body>
 </html>
