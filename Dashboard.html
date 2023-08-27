@@ -127,9 +127,9 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="#">
+                        <a id="TimeTableButton" href="#" onclick="TimeTableShow();">
                             <i class='bx bx-table icon'></i>
-                            <span class="text nav-text">Assessments</span>
+                            <span class="text nav-text">Timetable</span>
                         </a>
                     </li>
 
@@ -186,6 +186,11 @@
     <object type="text/html" data="GradeCalculate.html" width="1278px" height="780px">
     </object>
  </div>
+        
+                <div id="TimeTableDiv" style="display:none;"> 
+    <object type="text/html" data="Timetableindex.html" width="1278px" height="780px">
+    </object>
+ </div>
 
 
 
@@ -214,6 +219,18 @@ function myFunction() {
               
              document.getElementById('GradeCalcDiv').style.display = "block"; 
               document.getElementById('HomeWorkDiv').style.display = "none";
+              document.getElementById('TimeTableDiv').style.display = "none";
+          }
+    </script>
+    
+     <script>
+          function TimeTableShow(){
+ 
+             
+              
+             document.getElementById('GradeCalcDiv').style.display = "none"; 
+              document.getElementById('HomeWorkDiv').style.display = "none";
+              document.getElementById('TimeTableDiv').style.display = "block";
           }
     </script>
     
@@ -224,6 +241,7 @@ function myFunction() {
   
 document.getElementById('HomeWorkDiv').style.display = "block";
 document.getElementById('GradeCalcDiv').style.display = "none";
+        document.getElementById('TimeTableDiv').style.display = "none";
      }
          
    
