@@ -1,381 +1,261 @@
-<!--Timetable Index-->
-<!--Craeted by Sameul-->
-<!--Last updated on:25/08/2023-->
-<!--Description:The student will be able to store their school timetable as well as their room number. This will be saved ofline. -->
-
+<!------------------------------------------SIDEBAR----------------------------------------->
+<!--Name: Abhi-->
 
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-</head>
-<body onload="localStore.loadLocalStorage();">
-<!-- partial:index.partial.html -->
-<div class="form">
-
-<section id="content">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<style type="text/css">
-  
-    .button {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  
-  cursor: pointer;
-  border-radius:20px;
-        margin-left:100px;
-}
+    <!----======== CSS Link======== -->
+    <link rel="stylesheet" href="Dashboardstyle.css">
     
-    
-    body{
-    margin-top:10px;
-            background: linear-gradient(to right, #ddd729, #1bb678);
-            
-}
-.bg-light-gray {
-    background: linear-gradient(to right, #ddd729, #1bb678);
-    
-}
-.table-bordered thead td, .table-bordered thead th {
-    border-bottom-width: 2px;
-      border-radius: 20px;
-     padding: 5px
-    
-}
-    
-th, td {
-  padding: 15px;
-}
-.table thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6;
-    padding: 20px
-    
-    
-    
-}
-.table-bordered td, .table-bordered th {
-    border: 1px  #dee2e6;
-    padding: 20px
-    
-}
-
-
-.bg-sky.box-shadow {
-    box-shadow: 0px 5px 0px 0px #00a2a7
-}
-
-.bg-orange.box-shadow {
-    box-shadow: 0px 5px 0px 0px #af4305
-}
-
-.bg-green.box-shadow {
-    box-shadow: 0px 5px 0px 0px #4ca520
-}
-
-.bg-yellow.box-shadow {
-    box-shadow: 0px 5px 0px 0px #dcbf02
-}
-
-.bg-pink.box-shadow {
-    box-shadow: 0px 5px 0px 0px #e82d8b
-}
-    
-.bg-pink.box-shadow {
-    box-shadow: 0px 5px 0px 0px #e82d8b
-}
-
-
-.bg-purple.box-shadow {
-    box-shadow: 0px 5px 0px 0px #8343e8
-}
-
-.bg-lightred.box-shadow {
-    box-shadow: 0px 5px 0px 0px #d84213
-}
-
-
-.bg-sky {
-    background-color: #02c2c7
-}
-    
-
-
-.bg-orange {
-    background-color: #e95601
-}
-
-.bg-green {
-    background-color: #5bbd2a
-}
-
-.bg-yellow {
-    background-color: #f0d001
-}
-
-.bg-pink {
-    background-color: #ff48a4
-}
-
-.bg-purple {
-    background-color: #9d60ff
-}
-
-.bg-lightred {
-    background-color: #ff5722
-}
-
-.padding-15px-lr {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding: 20px
-}
-.padding-5px-tb {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    
-}
-.margin-10px-bottom {
-    margin-bottom: 10px;
-}
-.border-radius-5 {
-    border-radius: 5px;
-}
-
-.margin-10px-top {
-    margin-top: 10px;
-}
-.font-size14 {
-    font-size: 14px;
-}
-
-.text-light-gray {
-    color: #d6d5d5;
-}
-.font-size13 {
-    font-size: 13px;
-}
-
-.table-bordered td, .table-bordered th {
-    border: 1px solid #dee2e6;
-      border-radius: 50px;
-    
-}
-.table td, .table th {
-    padding: .75rem;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
-    
- }
-    
-
-    
-    </style>
-</head>
-<body >
-<div class="container" >
-<div class="timetable-img text-center">
-<img src="img/content/timetable.png" alt>
-</div>
-<div class="table-responsive">
-<table class="table table-bordered text-center ">
-<thead>
-<tr class="bg-light-gray skibidi">
-<th class="text-uppercase">Time
-</th>
-<th class="text-uppercase">Monday</th>
-<th class="text-uppercase">Tuesday</th>
-<th class="text-uppercase">Wednesday</th>
-<th class="text-uppercase">Thursday</th>
-<th class="text-uppercase">Friday</th>
-</tr>
-</thead>
-<tbody>
-<tr> 
-<td class="align-middle">8:45-9:10<br>Tutor + STAR</td>
-<td>
-<span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-</tr>
-<tr>
-<td class="align-middle">9:10-9:58<br>Period 1</td>
-<td>
-<span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-    <span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-orange padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<tr>
-<td class="align-middle">9:58-10:46<br>Period 2</td>
-<td>
-<span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-orange padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-
-<tr>
-<td class="align-middle">11:08–11:56<br>Period 3</td>
-<td>
-    <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-orange padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-    <span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-</tr>
-<tr>
-<td class="align-middle">11:56–12:44<br>Period 4</td>
-<td>
-<span class="bg-orange padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-    <span class="bg-orange padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-</tr>
-  <td class="align-middle">1:34–2:22<br>Period 5</td>
-<td>
-    <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-    <span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-</tr>
-<tr>
-<td class="align-middle">2:22-3:10<br>Period 6</td>
-<td>
-<span class="bg-lightred padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-
-<td>
-    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-pink padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-green padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-<td>
-<span class="bg-purple padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16  xs-font-size13" contenteditable>Subject</span>
-<div class="margin-10px-top font-size14" contenteditable>Room Name</div>
-</td>
-</tr>
-</tbody>
-</table>
-  </section>
-  <p>
-    <button id="save" class="button">Save</button>
-<button id="clear" class="button">Clear</button>
-    
-  </p>
-</div>
-<!-- partial -->
-    <script  src="Timetablescript.js">
-    
-    
-    </script>
-      
-      
  
+    <!----===== Boxicons CSS Link===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Tab Title-->
+    <title>Dashboard</title> 
+    <script>
+        window.addEventListener("load", function () {
+            var contentContainer = document.querySelector(".content-container");
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "external.html", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    contentContainer.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
+    </script>
+    
+   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <style>
+       
+        #specialbody {
+            position:absolute;
+            
+        }
+     
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
 
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
+</head>
+
+<body id="specialbody" style="overflow:hidden;" onload="myFunction()">
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="BMGLogo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">BMG DIARY</span>
+                    <span class="profession">Prototype</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar" style="overflow:hidden;">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="Dashboard.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    
+                    <li class="nav-link">
+                        <a id="HomeworkButton" href="#" onclick="HomeworkShow();">
+                            <i class='bx bx-checkbox-checked icon'></i>
+                            <span class="text nav-text">Homework</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a id="TimeTableButton" href="#" onclick="TimeTableShow();">
+                            <i class='bx bx-table icon'></i>
+                            <span class="text nav-text">Timetable</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-comment-error icon'></i>
+                            <span class="text nav-text">Policies</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a id="GradeButton" href="#" onclick="GradeCalcShow(); GradeOverHomework();">
+                            <i class='bx bxs-calculator icon'></i>
+                            <span class="text nav-text">Grade Calculator</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="Logoutindex.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-sun icon sun'></i>
+                        <i class='bx bx-moon icon moon'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        
+    
+    <div id="HomeWorkDiv" style="display:none;"> 
+    <object type="text/html" data="HomeworkTracker.html" width="1500px" height="5000px">
+    </object>
+ </div>
+        
+        <div id="GradeCalcDiv" style="display:none;"> 
+    <object type="text/html" data="GradeCalculate.html" width="1500px" height="780px">
+    </object>
+ </div>
+        
+                <div id="TimeTableDiv" style="display:none;"> 
+    <object type="text/html" data="Timetableindex.html" width="1500px" height="5000px">
+    </object>
+ </div>
+
+
+
+
+<div id="snackbar">Welcome!</div>
+    </section>
+    
+    
+
+
+    <script src="Dashboardscript.js"></script>
+   
+    <script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+    
+ 
+    
+    <script>
+          function GradeCalcShow(){
+ 
+             
+              
+             document.getElementById('GradeCalcDiv').style.display = "block"; 
+              document.getElementById('HomeWorkDiv').style.display = "none";
+              document.getElementById('TimeTableDiv').style.display = "none";
+          }
+    </script>
+    
+     <script>
+          function TimeTableShow(){
+ 
+             
+              
+             document.getElementById('GradeCalcDiv').style.display = "none"; 
+              document.getElementById('HomeWorkDiv').style.display = "none";
+              document.getElementById('TimeTableDiv').style.display = "block";
+          }
+    </script>
+    
+   <script>
+
+
+     function HomeworkShow(){
+  
+document.getElementById('HomeWorkDiv').style.display = "block";
+document.getElementById('GradeCalcDiv').style.display = "none";
+        document.getElementById('TimeTableDiv').style.display = "none";
+     }
+         
+   
+        
+    </script>
+        
+       
+   
+    
+    
+
+
+
+    
 </body>
 </html>
