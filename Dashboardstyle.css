@@ -432,6 +432,7 @@ body.dark .switch::before{
     overflow-y: hidden;
     overflow-x: hidden;
     overflow: hidden;
+    z-index: 100;
 }
 .Google-calendar{
     position: fixed;
@@ -442,6 +443,7 @@ body.dark .switch::before{
     left: 50%;
     overflow-y: hidden;
     overflow-x: hidden;
+    z-index: 100;
 }
 
 .Google-notes{
@@ -453,6 +455,7 @@ body.dark .switch::before{
     left: 50%;
     overflow-y: hidden;
     overflow-x: hidden;
+    z-index: 100;
 }
 
 .homework{
@@ -464,6 +467,7 @@ body.dark .switch::before{
     left: 50%;
     overflow-y: hidden;
     overflow-x: hidden;
+    z-index:1;
 }
 
 
