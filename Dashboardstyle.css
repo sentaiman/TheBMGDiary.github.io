@@ -422,3 +422,48 @@ body.dark .switch::before{
 
     font-size: 10px;
 }
+
+.todo-list{
+    position: fixed;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    left: 100px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+.Google-calendar{
+    position: fixed;
+    align-items: center;
+    top: 100px;
+    width: 35%;
+    height: 40%;
+    left: 50%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.Google-notes{
+    position: fixed;
+    align-items: center;
+    top: 380px;
+    width: 35%;
+    height: 40%;
+    left: 50%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.homework{
+    position: fixed;
+    align-items: center;
+    top: 380px;
+    width: 35%;
+    height: 40%;
+    left: 50%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
