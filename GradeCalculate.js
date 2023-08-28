@@ -14,36 +14,36 @@ const getResult = () => {
     if (percentage >= 90) {
         document.getElementById("grade").innerHTML = "A+";
     }
-    else if (percentage >= 80) {
+    else if (percentage >= 80 or <= 89) {
         document.getElementById("grade").innerHTML = "A";
 
     }
-    else if (percentage >= 70) {
+    else if (percentage >= 75 or <= 79) {
         document.getElementById("grade").innerHTML = "B+";
 
     }
-    else if (percentage >= 60) {
+    else if (percentage >= 70 or <= 74) {
         document.getElementById("grade").innerHTML = "B";
 
     }
-    else if (percentage >= 50) {
-        document.getElementById("grade").innerHTML = "B+";
-
-    }
-    else if (percentage >= 40) {
+    else if (percentage >= 65 or <= 69) {
         document.getElementById("grade").innerHTML = "C+";
 
     }
-    else if (percentage >= 30) {
+    else if (percentage >= 60 <=64) {
         document.getElementById("grade").innerHTML = "C";
 
     }
-    else if (percentage >= 20) {
+    else if (percentage >= 50 <=59) {
         document.getElementById("grade").innerHTML = "D+";
 
     }
+    else if (percentage >= 45or <=49) {
+        document.getElementById("grade").innerHTML = "D";
+    }
+        
     else {
-        document.getElementById("grade").innerHTML = "You Are Failed";
+        document.getElementById("grade").innerHTML = "You Failed";
 
     }
 
