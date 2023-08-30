@@ -1,0 +1,298 @@
+<!------------------------------------------SIDEBAR----------------------------------------->
+<!--Name: Abhi-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS Link======== -->
+    <link rel="stylesheet" href="Dashboardstyle.css">
+    
+ 
+    <!----===== Boxicons CSS Link===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Tab Title-->
+    <title>Dashboard</title> 
+    <script>
+        window.addEventListener("load", function () {
+            var contentContainer = document.querySelector(".content-container");
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "external.html", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    contentContainer.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
+    </script>
+    
+   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <style>
+      
+        #specialbody {
+            position:absolute;
+            
+        }
+     
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
+</head>
+
+<body id="specialbody" style="overflow:hidden;" onload="myFunction()">
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <a href="Dashboard.html">
+                    <img src="BMGLogo.png">
+                        </a>
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">BMG DIARY</span>
+                    <span class="profession">Prototype</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle' onClick="BlurBackground();"></i>
+        </header>
+
+        <div class="menu-bar" style="overflow:hidden;">
+            <div class="menu">
+            
+                
+             
+            
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="Dashboard.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    
+                    <li class="nav-link">
+                        <a id="HomeworkButton" href="#" onclick="HomeworkShow();">
+                            <i class='bx bx-checkbox-checked icon'></i>
+                            <span class="text nav-text">Homework</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a id="TimeTableButton" href="#" onclick="TimeTableShow();">
+                            <i class='bx bx-table icon'></i>
+                            <span class="text nav-text">Timetable</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-comment-error icon'></i>
+                            <span class="text nav-text">Policies</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a id="GradeButton" href="#" onclick="GradeCalcShow(); GradeOverHomework();">
+                            <i class='bx bxs-calculator icon'></i>
+                            <span class="text nav-text">Grade Calculator</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="settings.html">
+                            <i class='bx bx-cog icon'></i>
+                            <span class="text nav-text">Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <h1>&zwnj; &zwnj; &zwnj; &zwnj; &zwnj; <br><br><br></h1>
+
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="Logoutindex.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-sun icon sun'></i>
+                        <i class='bx bx-moon icon moon'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    
+             
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+                 <section class="home">
+                     <div class="hero">
+                        <div class="bottom-content">
+            </div>
+             
+        </div>
+
+
+
+    </nav>
+                
+    
+    <section>
+          <object id="calendar" type="text/html" data="Calendar.html" width="1366px" height="768px" style="position:relative;">
+    </object>         
+
+    
+    <div id="HomeWorkDiv" style="display:none;"> 
+    <object type="text/html" data="HomeworkTracker.html" width="1500px" height="5000px">
+    </object>
+ </div>
+        
+        <div id="GradeCalcDiv" style="display:none;"> 
+    <object type="text/html" data="GradeCalculate.html" width="1500px" height="780px">
+    </object>
+ </div>
+        
+        
+        
+                <div id="TimeTableDiv" style="display:none;"> 
+    <object type="text/html" data="Timetableindex.html" width="1500px" height="5000px">
+    </object>
+ </div>
+
+<div id="snackbar">Welcome!</div>
+    </section>   
+                
+                
+
+
+    <script src="Dashboardscript.js"></script>
+   
+    <script>
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+                
+                <script>
+                
+                       function BlurBackground() {
+  var element = document.body;
+  element.classList.toggle("Blurry");
+}
+                </script>
+                
+    
+ 
+    
+    <script>
+          function GradeCalcShow(){
+ 
+             
+              
+             document.getElementById('GradeCalcDiv').style.display = "block"; 
+              document.getElementById('HomeWorkDiv').style.display = "none";
+              document.getElementById('TimeTableDiv').style.display = "none";
+              document.getElementById('calendar').style.display = "none";
+          }
+    </script>
+    
+     <script>
+          function TimeTableShow(){
+ 
+             
+              
+             document.getElementById('GradeCalcDiv').style.display = "none"; 
+              document.getElementById('HomeWorkDiv').style.display = "none";
+              document.getElementById('TimeTableDiv').style.display = "block";
+              document.getElementById('calendar').style.display = "none";
+          }
+    </script>
+    
+   <script>
+
+
+     function HomeworkShow(){
+
+document.getElementById('HomeWorkDiv').style.display = "block";
+document.getElementById('GradeCalcDiv').style.display = "none";
+document.getElementById('TimeTableDiv').style.display = "none";
+document.getElementById('calendar').style.display = "none";
+     }
+         
+   
+        
+    </script>
+        
+       
+   
+    
+    
+
+
+
+    
+</body>
+</html>
