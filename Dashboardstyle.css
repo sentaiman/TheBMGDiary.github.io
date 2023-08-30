@@ -418,9 +418,7 @@ body.dark .switch::before{
     justify-content: space-between;
     padding: 0 10px;
     border-radius: 10px;
-    
     position: fixed;
-
     font-size: 10px;
 }
 
