@@ -14,31 +14,31 @@ const getResult = () => {
     if (percentage >= 90) {
         document.getElementById("grade").innerHTML = "A+";
     }
-    else if (percentage >= 80 or <= 89) {
+    else if (percentage >= 80 && percentage <= 89) {
         document.getElementById("grade").innerHTML = "A";
 
     }
-    else if (percentage >= 75 or <= 79) {
+    else if (percentage >= 75 && percentage <= 79) {
         document.getElementById("grade").innerHTML = "B+";
 
     }
-    else if (percentage >= 70 or <= 74) {
+    else if (percentage >= 70 && percentage <= 74) {
         document.getElementById("grade").innerHTML = "B";
 
     }
-    else if (percentage >= 65 or <= 69) {
+    else if (percentage >= 65 && percentage <= 69) {
         document.getElementById("grade").innerHTML = "C+";
 
     }
-    else if (percentage >= 60 <=64) {
+    else if (percentage >= 60 && percentage <=64) {
         document.getElementById("grade").innerHTML = "C";
 
     }
-    else if (percentage >= 50 <=59) {
+    else if (percentage >= 50 && percentage <= 59) {
         document.getElementById("grade").innerHTML = "D+";
 
     }
-    else if (percentage >= 45or <=49) {
+    else if (percentage >= 45 && percentage <= 49) {
         document.getElementById("grade").innerHTML = "D";
     }
         
