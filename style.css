@@ -1,0 +1,380 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+ background-color: #E4E9F7;
+     color: black;
+    background-size: cover;
+    overflow: hidden;
+    margin-left:95px;
+}
+
+.yourmum {
+ 
+        filter: invert(100%);
+        background-color: black;
+    
+    
+    
+}
+
+#container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  margin: auto;
+}
+
+
+
+
+/*       LEFT PANE        */
+.left{
+    width: 25vw;
+    height: 100vh;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+
+.chosenDate{
+    color: black;
+    margin: auto;
+    height: 50vh;
+    padding-top: 10vh;
+}
+
+.chosenDate h1{
+    font-size: 6rem;
+    padding: 1vh;
+    font-family: 'Noto Sans', sans-serif;
+}
+.chosenDate h3{
+    font-size: 1.5rem;
+        font-family: 'Source Sans Pro', sans-serif;
+
+}
+.chosenDate h1, .chosenDate h3{
+    text-align: center;
+}
+
+
+#daysEventsTop{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.daysEventsTopline{
+    display:flex;
+    flex-direction: row;
+}
+
+.cancelSelected{
+    width: 20%;
+    cursor: pointer;
+}
+
+.eventInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 80%;
+    padding-bottom: 1em;
+}
+
+#addBtn{
+    border: none;
+    height: 20px;
+}
+
+#eventAdd{
+    border: 0;
+    border-radius: 5px;
+    color: black;
+    height: 25px;
+    width: 100%;
+    padding: 0 10px;
+    cursor: pointer;
+    transition-duration: 350ms;
+    transition-property: background-color;
+    background-color: rgba(165, 165, 165, 0.425);
+}
+
+#eventAdd:hover{
+    background-color: rgba(165, 165, 165, 0.85);
+
+}
+
+#eventAdd:focus, #itemEditor:focus{
+    border: none;
+    outline: none;
+}
+
+#eventAdd::placeholder{
+    color: rgb(255, 233, 233);
+    text-align: center;
+}
+
+#daysEvents{
+    margin: auto;
+    align-items: flex-start;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    visibility: hidden;
+    height: 50vh;
+    width: 100%;
+}
+
+#daysEvents h2{
+    padding: 0 0 1em 0;
+}
+
+#daysEvents #daysEventsTop{
+    width: 100%;
+    text-align: center;
+}
+
+#addEventTitle{
+    width: 90%;
+    margin: auto;
+}
+
+.inlineText{
+    display: inline-block;
+}
+
+/*      EVENTS LIST STARTS HERE     */
+
+#listContainer{
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    /*overflow: auto;*/
+    }
+
+#listItems{
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+}
+
+.monthEvents{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.singleItem, .singleMonthItem{
+    display: flex;
+    flex-direction: row;
+    min-height: 35px;
+    border: sandybrown 0px solid;
+    margin: 10px 0;
+    align-items: stretch;
+}
+
+.singleMonthItem{
+    flex-direction: column;
+}
+
+.singleItem:hover{
+    cursor: pointer;
+}
+
+.itemText, .monthItemText, #itemEditor{
+    background: rgba(185, 185, 185, 0.47);
+    border: green 0px solid;
+    border-radius: 5px;
+    align-self: center;
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 80%;
+    color: #fefcf9;
+    font-family: 'Lato', sans-serif;
+    word-wrap: break-word;
+}
+
+.monthItemText{
+    margin: 10px auto;
+}
+
+#itemEditor{
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+
+.itemOptions{
+    width: 10%;
+    font-size: 2rem;
+    transform: rotate(90deg);
+    text-align: center;
+}
+
+.itemOptions:hover{
+    cursor: pointer;
+}
+
+
+
+#listItems{
+    padding: 10px 0;
+    width: 100%;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+}
+
+ol li{
+    color: black
+    font-family: 'Lato', sans-serif;
+}
+
+.delBtn, .editBtn{
+padding-right: 2em;
+display: block;
+}
+
+/*      MONTH EVENTS PANEL      */
+
+.monthEvents{
+    height: 50vh;
+    visibility: visible;
+}
+
+.monthEvents h3, .monthEvents h4{
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+
+
+
+/*      LEFT PANE ENDS      */
+
+#cal{
+    margin: 4em auto;
+    width: 60%;
+    height: 80vh;
+}
+
+.weekdays{
+    display: flex;
+}
+
+
+
+.returnMonth{
+    visibility: hidden;
+    color: black
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    user-select: none;
+    cursor: pointer;
+    width: 20vw;
+    margin: auto;
+    transition-duration: 200ms;
+    transition-property: color;
+}
+
+.returnMonth:hover{
+    color: black;
+}
+
+.monthLine{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 3rem;
+
+}
+
+.monthLine h3{
+    color: black;
+}
+
+.monthYear, .todayDate, .todayDay, .day, .dayNum, #backMonth, #forwardMonth, .prevMonthDayNum{
+    cursor: default;
+    user-select: none;
+}
+
+#backMonth, #forwardMonth{
+    cursor: pointer;
+}
+
+h1{
+    color: black;
+    font-size: 3rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+#calendar{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    height: 80%;
+    width: 100%;
+    color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+#calendar .day, .dayNum, .prevMonthDayNum{
+    box-sizing: border-box;
+    cursor: default;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding: 1em;
+}
+
+.currentDate{
+    text-decoration: underline;
+ 
+}
+
+
+.currentlySelected{
+    border: rgba(189, 189, 255, 0.705) 0px solid;
+}
+
+.dayNum span{
+    padding:0;
+    margin: 0;
+}
+
+.dayNum{
+    transition-duration: 200ms;
+    transition-property: background-color;
+}
+
+#calendar .dayNum:hover{
+    background-color: rgba(165, 165, 165, 0.425);
+    cursor: pointer;
+}
+
+.prevMonthDayNum{
+    color: rgba(214, 214, 214, 0.55);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: white;
+} 
