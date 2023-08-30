@@ -34,7 +34,7 @@
     
    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <style>
-       
+      
         #specialbody {
             position:absolute;
             
@@ -101,7 +101,7 @@
                 </div>
             </div>
 
-            <i class='bx bx-chevron-right toggle'></i>
+            <i class='bx bx-chevron-right toggle' onClick="BlurBackground();"></i>
         </header>
 
         <div class="menu-bar" style="overflow:hidden;">
@@ -161,7 +161,7 @@
 
                 </ul>
             </div>
-
+            <h1>&zwnj; &zwnj; &zwnj; &zwnj; &zwnj; <br><br><br></h1>
 
 
             <div class="bottom-content">
@@ -179,6 +179,8 @@
                     </div>
                     <span class="mode-text text">Dark mode</span>
 
+                    
+             
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
@@ -194,9 +196,12 @@
 
 
     </nav>
-
+                
+    
     <section>
-        
+          <object id="calendar" type="text/html" data="Calendar.html" width="1366px" height="768px" style="position:relative;">
+    </object>         
+
     
     <div id="HomeWorkDiv" style="display:none;"> 
     <object type="text/html" data="HomeworkTracker.html" width="1500px" height="5000px">
@@ -208,6 +213,8 @@
     </object>
  </div>
         
+        
+        
                 <div id="TimeTableDiv" style="display:none;"> 
     <object type="text/html" data="Timetableindex.html" width="1500px" height="5000px">
     </object>
@@ -215,6 +222,8 @@
 
 <div id="snackbar">Welcome!</div>
     </section>   
+                
+                
 
 
     <script src="Dashboardscript.js"></script>
@@ -226,6 +235,15 @@ function myFunction() {
   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 </script>
+                
+                <script>
+                
+                       function BlurBackground() {
+  var element = document.body;
+  element.classList.toggle("Blurry");
+}
+                </script>
+                
     
  
     
@@ -237,6 +255,7 @@ function myFunction() {
              document.getElementById('GradeCalcDiv').style.display = "block"; 
               document.getElementById('HomeWorkDiv').style.display = "none";
               document.getElementById('TimeTableDiv').style.display = "none";
+              document.getElementById('calendar').style.display = "none";
           }
     </script>
     
@@ -248,6 +267,7 @@ function myFunction() {
              document.getElementById('GradeCalcDiv').style.display = "none"; 
               document.getElementById('HomeWorkDiv').style.display = "none";
               document.getElementById('TimeTableDiv').style.display = "block";
+              document.getElementById('calendar').style.display = "none";
           }
     </script>
     
@@ -259,6 +279,7 @@ function myFunction() {
 document.getElementById('HomeWorkDiv').style.display = "block";
 document.getElementById('GradeCalcDiv').style.display = "none";
 document.getElementById('TimeTableDiv').style.display = "none";
+document.getElementById('calendar').style.display = "none";
      }
          
    
