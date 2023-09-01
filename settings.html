@@ -1,0 +1,66 @@
+<!--Login Page --->
+<!--File Name: Index.html --->
+<!--Created by Abhijay Talluri-->
+<!--Last Updated: 25/08/23--->
+<!--Description: This index.html is a html file for a login page.A login page allows users to get access to a secure portion
+of a website or service. Its major function is to validate users' identities before providing them access to personalised content,
+features, or data.--->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links to the css page.-->
+    <link rel="stylesheet" href="settingsstyle.css"/>
+    <!--Gets fonts from here-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <title>Login Page</title>
+</head>
+
+    <!--Thebody-->
+<body>
+
+    <div class="login-card-container">
+        <div class="login-card">
+           <!--Header-->
+            <div class="login-card-header">
+                <h1>Settings</h1>
+            
+            </div>
+            <form class="login-card-form">
+                <div class="form-item">
+                    <!--Form Items-->
+                    <span class="form-item-icon material-symbols-rounded">person</span> 
+                    <!--Email Textbox-->
+                    <input type="text" placeholder="Change Username" id="userName" 
+                    autofocus required>
+                </div>
+                <div class="form-item">
+                    <!--Form Items-->
+                    <span class="form-item-icon material-symbols-rounded">mail</span> 
+                    <!--Email Textbox-->
+                    <input type="text" placeholder="Change Email" id="userName" 
+                    autofocus required>
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">lock</span>
+                    <!--Password Textbox-->
+                    <input type="password" placeholder="Change Password" id="passWord"
+                     required>
+                </div>
+            
+                <!--Login Button-->
+                <button type="button" value="Login" onClick="loginPage(form)">Save</button>
+            </form>
+        
+        </div>
+    </div>
+    <!--Access the information of the users.-->
+<script src="validation.js">
+</script>
+
+</body>
+</html>
