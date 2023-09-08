@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task list</title>
+    <link rel="stylesheet" type="text/css" href="style.css"></style>
+    <link href='https://css.gg/close-o.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Source+Sans+Pro:wght@600&display=swap"
+    rel="stylesheet">
+
+
+</head>
+<body>
+    <div id="yourmum">
+<div id="container">
+   
+   
+    <div class="left">
+        
+        <div class="chosenDate">
+            <h1 class="todayDate">17</h1>
+            <h3 class="todayDay">WEDNESDAY</h3>
+        </div>
+
+
+        <div id="daysEvents">
+        <div class="monthEvents">
+            <h3>Your events this month...</h3>
+
+            <div id="monthListContainer">
+                <ol id="monthListItems">
+                </ol>
+            </div>
+        </div>
+            <!--right-->
+            <div id="daysEventsTop">
+                <h3 class="cancelSelected">x</h3>
+                <h2 id="addEventTitle">Add an event!</h2>
+                
+                <div class="eventInput">
+                <input id="eventAdd" contenteditable = "true" type="text" placeholder="What's on today?"></input>
+                </div>
+
+                <div id="listContainer">
+                    <ol id="listItems">
+                    </ol>
+                </div>
+            </div>
+            <!-- </div> MOVE DIV DIVIDE BELOW LIST CONTAINER -->
+
+                
+        
+            
+        
+        </div>
+    </div>
+
+        
+    <div id = "cal"> <!--mid-->
+        <div><h3 class="returnMonth">Return to today</h3></div>
+        <div class="monthLine">
+            <h3 id = "backMonth"><</h3>
+            <h1 class="monthYear">June 2020</h1>
+            <h3 id = "forwardMonth">></h3>
+        </div>
+
+    
+    <div id = "calendar">
+        <div class="day">SUN</div>
+        <div class="day">MON</div>
+        <div class="day">TUE</div>
+        <div class="day">WED</div>
+        <div class="day">THU</div>
+        <div class="day">FRI</div>
+        <div class="day">SAT</div>
+    </div>
+</div>
+
+        
+  
+
+        </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script defer src="appcopy.js"></script>
+    
+    <script>
+        function myFunction() {
+  var element = document.body;
+  element.classList.toggle("yourmum");
+}
+    </script>
+</html>
+
+
